@@ -20,14 +20,16 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/favicon.ico",
+              "src/assets/oldwomanico.ico",
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -121,6 +123,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "jogo-da-velha"
 }

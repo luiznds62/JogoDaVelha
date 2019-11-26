@@ -7,7 +7,7 @@ const {app, BrowserWindow} = require('electron')
     function createWindow () {
       mainWindow = new BrowserWindow({
         width: 800,
-        height: 600,
+        height: 800,
         title: "Jogo da Velha - Redes",
         icon: __dirname + "./src/assets/oldwomanico.ico",
         webPreferences: {
@@ -23,7 +23,7 @@ const {app, BrowserWindow} = require('electron')
           slashes: true
         })
       );
-      
+
       // Open the DevTools.
       //mainWindow.webContents.openDevTools()
 

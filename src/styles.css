@@ -1,2 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #00a896 !important;
+  border-color: #00a896 !important;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:visited {
+  background-color: #028090 !important;
+  border-color: #028090 !important;
+}
+
+.progress-bar {
+  background-color: #616f7d !important;
+}
