@@ -21,4 +21,12 @@ export class GameServiceService {
   getJogador2() {
     return this.http.get(this.base_url + "/jogador/j2")
   }
+
+  confirmarJogador1(jogador) {
+    return this.http.post(this.base_url + "/conectar/j1", {nome: jogador})
+  }
+
+  confirmarJogador2(jogador) {
+    return this.http.post(this.base_url + "/conectar/j2", {nome: jogador})
+  }
 }

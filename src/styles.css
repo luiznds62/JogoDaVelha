@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ngx-toastr/toastr.css";
 
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited {
+  color: #fff !important;
   background-color: #00a896 !important;
   border-color: #00a896 !important;
 }
@@ -12,6 +14,7 @@
 .btn-secondary:hover,
 .btn-secondary:active,
 .btn-secondary:visited {
+  color: #fff !important;
   background-color: #028090 !important;
   border-color: #028090 !important;
 }

@@ -1,0 +1,11 @@
+.card-img-top {
+  width: 50%;
+}
+
+.empty-space {
+  width: 50%;
+}
+
+.table td, .table th{
+    border: 1px solid #dee2e6 !important;
+}
