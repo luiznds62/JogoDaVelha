@@ -29,6 +29,9 @@ export class HomeComponent implements OnInit {
 
   constructor(private gameService: GameServiceService, private toastr: ToastrService, private router: Router) {
     this.verificarStatus();
+    setInterval(() => {
+      this.verificarStatus();
+    },1000)
   }
 
   ngOnInit() {
