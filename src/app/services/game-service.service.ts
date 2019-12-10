@@ -29,4 +29,12 @@ export class GameServiceService {
   confirmarJogador2(jogador) {
     return this.http.post(this.base_url + "/conectar/j2", {nome: jogador})
   }
+
+  buscarCampos(){
+    return this.http.get(this.base_url + "/statusMatriz")
+  }
+
+  marcarCampo(campo,jogador){
+    return this.http.post(this.base_url + "/marcar/" + campo, {jogador: jogador})
+  }
 }
