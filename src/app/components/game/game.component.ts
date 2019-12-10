@@ -28,7 +28,38 @@ export class GameComponent implements OnInit {
 
   atualizarMatriz() {
     this.gameService.buscarCampos().subscribe((resp: any) => {
-      console.log(resp.object);
+      var m = resp.object;
+
+      if(m.a1.marcado){
+        if (m.a1.jogador == this.jogador1) {
+          this.matriz[0].a1.jogador1 = true;
+          this.matriz[0].a1.jogador2 = false;
+        } else {
+          this.matriz[0].a1.jogador1 = false;
+          this.matriz[0].a1.jogador2 = true;
+        }
+      }
+
+      if(m.a2.marcado){
+        if (m.a2.jogador == this.jogador1) {
+          this.matriz[0].a2.jogador1 = true;
+          this.matriz[0].a2.jogador2 = false;
+        } else {
+          this.matriz[0].a2.jogador1 = false;
+          this.matriz[0].a2.jogador2 = true;
+        }
+      }
+
+      if(m.a3.marcado){
+        if (m.a3.jogador == this.jogador1) {
+          this.matriz[0].a3.jogador1 = true;
+          this.matriz[0].a3.jogador2 = false;
+        } else {
+          this.matriz[0].a3.jogador1 = false;
+          this.matriz[0].a3.jogador2 = true;
+        }
+      }
+
     });
   }
 
@@ -68,9 +99,11 @@ export class GameComponent implements OnInit {
           matriz[0].a1.jogador2 = false;
         }
 
-        this.gameService.marcarCampo("a1", this.jogadorAtual).subscribe((resp: any)=> {
-          console.log(`Sucesso: ${resp.sucess} - Mensagem: ${resp.message}`)
-        });
+        this.gameService
+          .marcarCampo("a1", this.jogadorAtual)
+          .subscribe((resp: any) => {
+            console.log(`Sucesso: ${resp.sucess} - Mensagem: ${resp.message}`);
+          });
         break;
       case "a2":
         if (this.jogadorAtual == this.jogador1) {
